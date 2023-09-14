@@ -1,0 +1,6 @@
+[general]
+    tags = ["EASY", "buffer_overflow"]
+    suiteName = "EASY01"
+    description = "Test for checking proper usage of scanf (negative)"
+
+[warn]
