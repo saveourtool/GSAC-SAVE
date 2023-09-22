@@ -1,21 +1,21 @@
 [general]
-    tags = ["GSAC"]
-    description = "Tests for GSAC contest"
+    tags = ["warn", "sarif"]
+    description = "Test warnings discovered by llvm pass SimplePass"
+    suiteName = "Only Warnings: with SARIF format"
     expectedWarningsPattern = "// ;warn:?(.*):(\\d+):? ?(.+)?"
-    execCmd = "./run.sh"
+    execCmd = "./run_save.sh"
 
 [warn]
-    execFlags = "--reporter=sarif"
+    exactWarningsMatch = true
     # regular expression to detect tests
-    testNameRegex = ".*Test.*"
+    testNameRegex = ".*(EASY|MEDIUM|HARD).*\\.(c|h)"
     actualWarningsFormat = "SARIF"
-    # enabling directory mode
-    wildCardInDirectoryMode = "/**/*.с"
+    # by default, in SARIF mode, it's supposed, that tool will print sarif report into the stdout
+    # however, it also could be provided via file
     actualWarningsFileName = "report.sarif"
     fileNameCaptureGroupOut = 1
     lineCaptureGroupOut = 2
     columnCaptureGroupOut = 3
     messageCaptureGroupOut = 4
-    exactWarningsMatch = false
     warningTextHasColumn = true
     warningTextHasLine = true
