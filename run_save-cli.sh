@@ -22,7 +22,7 @@ clang-12 -g -O0 -c -emit-llvm ${FILE_PATH} -o "$UNIQUE_NAME.bc"
 
 cd -
 
-opt-12 -load-pass-plugin libAnalyzer.so -passes=simple -disable-output "$BITCODE_DIR/${UNIQUE_NAME}.bc"
+opt-12 -load-pass-plugin ./libAnalyzer.so -passes=simple -disable-output "$BITCODE_DIR/${UNIQUE_NAME}.bc"
 
 REPORT="$UNIQUE_NAME.sarif"
 

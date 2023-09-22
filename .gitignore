@@ -1,3 +1,9 @@
+bc_dir
+reports
+report.sarif
+save-reports
+.idea
+
 # Prerequisites
 *.d
 

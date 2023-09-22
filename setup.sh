@@ -27,10 +27,6 @@ create_directory() {
 
 }
 
-BUILD_DIR="./example-analyzer/build"
-create_directory "$BUILD_DIR"
-project_build "$BUILD_DIR"
-
 BITCODE_DIR="./bc_dir"
 create_directory "$BITCODE_DIR"
 
