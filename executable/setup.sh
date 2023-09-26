@@ -2,7 +2,7 @@
 
 # ---------------------------------- install_required_packages -------------------------------- #
 
-if [[ "$EUID" -eq 0 ]]
+if [ "$EUID" -eq 0 ]
 then
   apt-get update && apt-get install -y clang-12 cmake build-essential clang-format libclang-12-dev \
                                      python3 python3-clang-12 python3-pip curl gnupg gnupg2
