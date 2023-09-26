@@ -1,4 +1,5 @@
 Current repo contain the set of tests, adopted for execution in [saveourtool](https://saveourtool.com/) platform.
+with [save-cli](https://github.com/saveourtool/save-cli) engine
 
 ### Local run
 
