@@ -2,21 +2,11 @@
 
 # ---------------------------------- install_required_packages -------------------------------- #
 
-if [[ "$EUID" -ne 0 ]]
+if [[ "$EUID" -eq 0 ]]
 then
-  echo "Please run with root permission!" && exit 1
-fi
-
-apt-get update && apt-get install -y clang-12 cmake build-essential clang-format libclang-12-dev \
+  apt-get update && apt-get install -y clang-12 cmake build-essential clang-format libclang-12-dev \
                                      python3 python3-clang-12 python3-pip curl gnupg gnupg2
-pip3 install --prefix=/usr/local libclang==14.0.1 pysarif
-
-PODMAM_SUB_REPO="/kubic:/libcontainers:/stable/xUbuntu_20.04/"
-PODMAN_REPO="https://download.opensuse.org/repositories/devel:$PODMAM_SUB_REPO"
-
-echo "deb $PODMAN_REPO /" | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
-curl -L "$PODMAN_REPO/Release.key" | apt-key add -
-apt-get update && apt-get install -y podman
+fi
 
 # ---------------------------------------- build -------------------------------------------- #
 create_directory() {
