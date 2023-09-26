@@ -7,6 +7,9 @@ Just execute
 
     ./run_local.sh
 
+<details>
+  <summary>Details</summary>
+
 It will do the following steps:
 
 1) Extract the files from `executable` directory to the root of project.
@@ -14,6 +17,8 @@ It will do the following steps:
 2) Run `./setup.sh` -- it will install required libraries and create directories, which will be used later.
 
 3) Execute `./save-0.3.9-linuxX64.kexe . --log results_only`
+
+</details>
 
 #### Explanation
 
