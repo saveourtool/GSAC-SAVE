@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 int main() {
+  // ;warn:8: Report message.
   char ptr[2];
   // Tried to write string into char's array.
   // Note that scanf also read the end of the line and the null symbol
