@@ -2,6 +2,10 @@ bc_dir
 reports
 report.sarif
 save-reports
+libAnalyzer.so
+run_save-cli.sh
+setup.sh
+save-0.3.9-linuxX64.kexe
 .idea
 
 # Prerequisites

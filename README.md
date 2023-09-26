@@ -2,11 +2,17 @@ Current repo contain the set of tests, adopted for execution in [saveourtool](ht
 
 ### Local run
 
+Just execute
+
+    ./run_local.sh
+
+It will do the following steps:
+
 1) Extract the files from `executable` directory to the root of project.
 
-2) Run `./setup.sh` -- it will install required libraries and create directories, which will be used later.  
+2) Run `./setup.sh` -- it will install required libraries and create directories, which will be used later.
 
-3) Execute `./save-0.3.9-linuxX64.kexe . --report-type json --result-output file` 
+3) Execute `./save-0.3.9-linuxX64.kexe . --report-type json --result-output file`
 
 #### Explanation
 
