@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # ---------------------------------- install_required_packages -------------------------------- #
 
