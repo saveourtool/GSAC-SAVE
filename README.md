@@ -13,7 +13,7 @@ It will do the following steps:
 
 2) Run `./setup.sh` -- it will install required libraries and create directories, which will be used later.
 
-3) Execute `./save-0.3.9-linuxX64.kexe . --report-type json --result-output file`
+3) Execute `./save-0.3.9-linuxX64.kexe . --log results_only`
 
 #### Explanation
 
@@ -29,12 +29,13 @@ and pass plugin, called `libAnalyzer.so` to the `llvm opt`.
 The `libAnalyzer.so`, provided in the `executable` directory of repository will create
 `.sarif` report files for each test, after what all reports will be collected in `reports` directory.
 
-The `save` will produce the report in `save-reports` directory in `json` format.
+The `save` will produce the report in stdout in pretty format.
 
-It will contain detailed information about matched warnings, where expected warnings were taken from `.sarif` reports,
+It will contain information about matched warnings, where expected warnings were taken from `.sarif` reports,
 created by `libAnalyzer.so` and actual warnings extracted directly from the test files, according pattern `expectedWarningsPattern`.
 
-**Note:** all warnings should be provided in tests like a comments:
+#### Note
+All **expected** warnings should be provided in tests like a comments:
 
 ```kotlin
 // ;warn:10:5: [ENUMS_SEPARATED] enum is incorrectly formatted: enums must end with semicolon{{.*}}
