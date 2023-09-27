@@ -1,0 +1,4 @@
+[general]
+    tags = ["warn", "buffer_overflow"]
+    description = "Tests directed to warn about buffer overflow"
+    suiteName = "Buffer Overflow test suites"

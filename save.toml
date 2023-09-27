@@ -1,7 +1,6 @@
 [general]
     tags = ["warn", "sarif"]
-    description = "Test warnings discovered by llvm pass SimplePass"
-    suiteName = "Only Warnings: with SARIF format"
+    description = "General configuration for GSAC test suites"
     expectedWarningsPattern = "// ;warn:?(.*):(\\d+):? ?(.+)?"
     execCmd = "./run_save-cli.sh"
 
