@@ -1,0 +1,5 @@
+[general]
+    tags = ["warn", "use_after_free"]
+    description = "Tests directed to warn usages of resources after their release"
+    suiteName = "Use After Free test suites"
+

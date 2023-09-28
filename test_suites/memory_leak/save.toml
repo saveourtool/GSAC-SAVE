@@ -1,0 +1,4 @@
+[general]
+    tags = ["warn", "memory_leak"]
+    description = "Tests directed to warn about memory leaks"
+    suiteName = "Memory Leak test suites"
